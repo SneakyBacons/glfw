@@ -234,13 +234,6 @@ alpha channel will be used to combine the framebuffer with the background.  This
 does not affect window decorations.  Possible values are `GLFW_TRUE` and
 `GLFW_FALSE`.
 
-@par
-@win32 GLFW sets a color key for the window to work around repainting issues
-with a transparent framebuffer.  The chosen color value is RGB 255,0,255
-(magenta).  This will make pixels with that exact color fully transparent
-regardless of their alpha values.  If this is a problem, make these pixels any
-other color before buffer swap.
-
 @anchor GLFW_FOCUS_ON_SHOW_hint
 __GLFW_FOCUS_ON_SHOW__ specifies whether the window will be given input
 focus when @ref glfwShowWindow is called. Possible values are `GLFW_TRUE` and `GLFW_FALSE`.
@@ -422,6 +415,10 @@ Possible values are `GLFW_TRUE` and `GLFW_FALSE`.
 Debug contexts for OpenGL and OpenGL ES are described in detail by the
 [GL_KHR_debug](https://www.khronos.org/registry/OpenGL/extensions/KHR/KHR_debug.txt)
 extension.
+
+@par
+This is the new name, introduced in GLFW 3.4.  The older
+`GLFW_OPENGL_DEBUG_CONTEXT` name is also available for compatibility.
 
 @anchor GLFW_OPENGL_PROFILE_hint
 __GLFW_OPENGL_PROFILE__ specifies which OpenGL profile to create the context
@@ -1364,6 +1361,10 @@ OpenGL forward-compatible one, or `GLFW_FALSE` otherwise.
 @anchor GLFW_OPENGL_DEBUG_CONTEXT_attrib
 __GLFW_CONTEXT_DEBUG__ is `GLFW_TRUE` if the window's context is in debug
 mode, or `GLFW_FALSE` otherwise.
+
+@par
+This is the new name, introduced in GLFW 3.4.  The older
+`GLFW_OPENGL_DEBUG_CONTEXT` name is also available for compatibility.
 
 @anchor GLFW_OPENGL_PROFILE_attrib
 __GLFW_OPENGL_PROFILE__ indicates the OpenGL profile used by the context.  This
