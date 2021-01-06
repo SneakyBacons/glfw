@@ -43,7 +43,11 @@ project "GLFW"
 
     filter "configurations:Debug"
 		runtime "Debug"
-		symbols "on"
+    symbols "on"
+    
+    filter "configurations:MemoryProfile"
+	  	runtime "Release"
+	  	optimize "on"
 
     filter "configurations:Development"
 		runtime "Release"

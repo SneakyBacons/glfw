@@ -103,3 +103,5 @@ tests/windows
 bin-int/
 
 bin/GLFW/windows/x86_64/Development/
+
+bin/
